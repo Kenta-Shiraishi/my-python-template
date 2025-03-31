@@ -31,9 +31,9 @@ uv sync
 uv sync --no-dev
 ```
 
-3. 環境変数ファイル(.env)を使う場合の設定（オプション）  
-`.bashrc` に以下を追記してください：
-```bash
+3. 環境変数ファイル(.env)を使う場合の設定（オプション）
+```bash:.bashrc
+# .bashrc に追記
 export UV_ENV_FILE=".env"
 ```
 
