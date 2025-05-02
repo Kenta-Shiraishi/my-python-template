@@ -47,20 +47,12 @@ uv run src/main.py
 
 ## 開発ツール
 
-### コードフォーマット
+### Linter & Formatter
 
-コードをフォーマットします：
-
-```bash
-make format
-```
-
-### リンター
-
-コードをリントします：
+ruffを使い高速な修正を実行します:
 
 ```bash
-make lint
+make fix
 ```
 
 ## プロジェクト構造
