@@ -1,8 +1,9 @@
+.PHONY: lint format fix
+
 lint:
-	uv run flake8 src
-	uv run isort --check --diff src
-	uv run black --check src
+	uv run ruff check src --fix
 
 format:
-	uv run isort src
-	uv run black src
+	uv run ruff format src
+
+fix: lint format

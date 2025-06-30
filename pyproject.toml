@@ -1,21 +1,33 @@
 [project]
 name = "my-python-template"
 version = "0.1.0"
-description = "Add your description here"
+description = "Minimal Python project template using uv"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
 dev = [
-    "black>=25.1.0",
-    "flake8>=7.1.2",
-    "isort>=6.0.1",
+    "ruff>=0.11.8",
 ]
 
-[tool.black]
+[tool.ruff]
 line-length = 119
+indent-width = 4
 
-[tool.isort]
-profile = "black"
-line_length = 119
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I", "UP", "PTH", "PERF"]
+ignore = ["F401", "F403", "F841"]
+
+fixable = ["ALL"]
+unfixable = ["B"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+line-ending = "lf"
+
+docstring-code-format = true
+
+docstring-code-line-length = "dynamic"
